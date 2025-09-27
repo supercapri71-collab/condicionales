@@ -1,7 +1,9 @@
+let prome;
+let resu1;
+
 obtienePromedio = function () {
      //variables para recuperar los valores de las cajas de texto
      let nota1;
-     let prome;
      let cmpResu;
      nota1 = parseFloat(document.getElementById("txtNota1").value);
      prome = calculaTasa(nota1);
@@ -40,19 +42,15 @@ obtienePromedio = function () {
 
 obtieneCapacidad = function () {
      //variables para recuperar los valores de las cajas de texto
-     let nota1;
-     let nota2;
-     let nota3;
-     let prome;
      let cmpResu;
-     nota1 = parseFloat(document.getElementById("txtNota1").value);
-     nota2 = parseFloat(document.getElementById("txtNota2").value);
-     nota3 = parseFloat(document.getElementById("txtNota3").value);
+     let nota1 = parseFloat(document.getElementById("txtNota1").value);
+     let nota2 = parseFloat(document.getElementById("txtNota2").value);
+     let nota3 = parseFloat(document.getElementById("txtNota3").value);
      prome = calculaCapacidad(nota1, nota2, nota3);
      mostrarTexto("lblProme", prome);
      if (nota1 > 50) {
           cmpResu = document.getElementById("lblResu");
-          cmpResu.innerText = (cmpResu, " La Capacidad de pago es 30% ");
+          cmpResu.innerText = " La Capacidad de pago es 30% ";
      } else {
           if (nota1 > 0 && nota1 < 51) {
                cmpResu = document.getElementById("lblResu");
@@ -68,7 +66,6 @@ obtieneDescuento = function () {
      //variables para recuperar los valores de las cajas de texto
      let nota1;
      let nota2;
-     let prome;
      let cmpResu;
      nota1 = parseFloat(document.getElementById("txtNota1").value);
      nota2 = parseInt(document.getElementById("txtNota2").value);
@@ -107,15 +104,22 @@ obtieneClave = function () {
      nota2 = nota1.length;
      prome = valeClave(nota2);
      mostrarTexto("lblResu", prome);
-
 }
-obtieneMinuscula=function(){
-      let nota1;
+obtieneMinuscula = function () {
+     let nota1;
      let nota2;
      let cmpResu;
      cmpResu = document.getElementById("txtNota1");
      nota1 = cmpResu.value;
-     nota2=parseInt(nota1.charCodeAt(0));
+     nota2 = parseInt(nota1.charCodeAt(0));
      prome = valeMinu(nota2);
      mostrarTexto("lblProme", prome);
+}
+obtienePermiso = function () {
+     let nota1 = parseInt(document.getElementById("txtNota1").value);
+     let nota2 = parseInt(document.getElementById("txtNota2").value);
+     let nota3 = parseInt(document.getElementById("txtNota3").value);
+     daPermiso(nota1, nota2, nota3);
+     mostrarTexto("lblProme", prome);
+     mostrarTexto("lblProme1", resu1);
 }

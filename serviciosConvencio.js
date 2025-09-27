@@ -93,3 +93,18 @@ valeMinu = function (nota2) {
     }
     return prome;
 }
+daPermiso = function (nota1, nota2, nota3) {
+    let cmpResu;
+    if (nota1 > 90 || nota2 > 90 || nota3 > 90) {
+        cmpResu = document.getElementById("lblResu");
+        prome = " Aprobado  ";
+        resu1 = true;
+    }
+    else {
+        cmpResu = document.getElementById("lblResu");
+        prome = " Negado vaya a dormir  ";
+        resu1 = false;
+    }
+    return prome, resu1
+
+}

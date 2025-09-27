@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <h1 class="titulo"> DAR PERMISO</h1>
+    <script src="utilitarios.js"></script>
+    <script src="serviciosConvencio.js"></script>
+    <script src="convencionales.js"></script>
+    <link rel="stylesheet" href="convencio.css" />
+</head>
+
+<body>
+    <div class="ingresoDatos">
+        <h2 class="tituloCampo"> Ingrese nota de Matematica : </h2>
+        <input class="cajaTexto" type="text" id="txtNota1" />
+    </div>
+    <div class="ingresoDatos">
+        <h2 class="tituloCampo"> Ingrese nota de Fisica : </h2>
+        <input class="cajaTexto" type="text" id="txtNota2" />
+    </div>
+    <div class="ingresoDatos">
+        <h2 class="tituloCampo"> Ingrese nota de Geometria : </h2>
+        <input class="cajaTexto" type="text" id="txtNota3" />
+    </div>
+
+    <div class="ingresoDatos">
+        <h3 class="tituloCampo">El permiso es : </h3>
+        <h3 class="tituloCampo" id="lblProme"></h3>
+    </div>
+    <h3 class="tituloCampo" id="lblProme1"></h3>
+    <input class="estiloBoton" type="button" value="VALIDAR PERMISO" onclick="obtienePermiso()" />
+</body>
+
+</html>
